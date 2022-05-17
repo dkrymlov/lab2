@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en" class="h-100" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head th:insert="blocks/head">
+</head>
+
+
+<body class="h-100 text-black bg-white">
+
+<div class="cover-container d-flex w-90 h-90 p-3 mx-auto flex-column">
+
+    <header class="mb-15" th:insert="blocks/header">
+    </header>
+
+    <main class="px-3">
+
+        <div class="categories p-3">
+            <h3>Розклад:</h3>
+        </div>
+
+        <table class="table table-white table-bordered table-hover text-center">
+            <thead>
+            <tr class="row ml-3">
+                <th class="col-2">Група</th>
+                <th class="col-2">Предмет</th>
+                <th class="col-2">Викладач</th>
+                <th class="col-2">Аудиторія</th>
+                <th class="col-2">Пара</th>
+                <th class="col-2">День</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="row ml-3" th:each="el : ${timetables}">
+                <td class="col-2" th:text="${el.group.name}"></td>
+                <td class="col-2" th:text="${el.lesson.name}"></td>
+                <td class="col-2" th:text="${el.teatcher.name}"></td>
+                <td class="col-2" th:text="${el.room}"></td>
+                <td class="col-2" th:text="${el.para}"></td>
+                <td class="col-2" th:text="${el.day.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </main>
+
+    <footer class="mt-auto text-white-50">
+
+    </footer>
+</div>
+
+</body>
+
+</html>

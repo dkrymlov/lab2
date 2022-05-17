@@ -1,0 +1,25 @@
+<header class="mb-15" th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml"
+        xmlns:sec="http://www.w3.org/1999/xhtml">
+
+    <div>
+        <nav class="nav nav-masthead justify-content-left float-md-end row">
+
+            <div class="left-block col-6">
+
+                <a class="nav-link" href="/lessons">Уроки</a>
+                <a class="nav-link" href="/groups">Групи</a>
+                <a class="nav-link" href="/teatchers">Викладачі</a>
+                <a class="nav-link" href="/timetables">Розклад</a>
+                <a class="nav-link" href="/faculties">Факультети</a>
+                <a class="nav-link" href="/pairs">Пари</a>
+
+            </div>
+
+            <div class="right-block col-6">
+                <a sec:authorize="!isAuthenticated()" class="nav-link" href="/login">Авторизація</a>
+                <a sec:authorize="!isAuthenticated()" class="nav-link" href="/registration">Реєстрація</a>
+                <a sec:authorize="isAuthenticated()" class="nav-link" href="/logout">Вийти</a>
+            </div>
+        </nav>
+    </div>
+</header>
