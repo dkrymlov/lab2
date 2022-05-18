@@ -11,4 +11,9 @@ public class HomepageController {
         return "redirect:/timetables";
     }
 
+    @GetMapping("/response")
+    public String response(){
+        return "security/return";
+    }
+
 }

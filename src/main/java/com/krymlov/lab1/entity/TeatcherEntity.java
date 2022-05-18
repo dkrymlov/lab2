@@ -16,7 +16,11 @@ public class TeatcherEntity extends Teatcher {
         super();
     }
 
-    public TeatcherEntity(@Min(1) Long id, @NotNull @NotEmpty String name, @NotNull @NotEmpty @Range(min = 6, max = 6) @Min(100000) @Max(999999) int phone, @NotNull @NotEmpty String degree) {
+    public TeatcherEntity(@NotNull @NotEmpty String name, @NotNull @NotEmpty @Range(min = 6, max = 6) @Min(100000) @Max(999999) int phone, @NotNull @NotEmpty String degree) {
+        super(name, phone, degree);
+    }
+
+    public TeatcherEntity(Long id, @NotNull @NotEmpty String name, @NotNull @NotEmpty @Range(min = 6, max = 6) @Min(100000) @Max(999999) int phone, @NotNull @NotEmpty String degree) {
         super(id, name, phone, degree);
     }
 

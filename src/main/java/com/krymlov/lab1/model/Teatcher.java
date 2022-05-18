@@ -2,6 +2,7 @@ package com.krymlov.lab1.model;
 
 import org.hibernate.validator.constraints.Range;
 
+import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -28,6 +29,12 @@ public class Teatcher {
     private String degree;
 
     public Teatcher(){}
+
+    public Teatcher(@NotNull @NotEmpty String name, @NotNull @NotEmpty @Range(min = 6, max = 6) @Min(100000) @Max(999999) int phone, @NotNull @NotEmpty String degree) {
+        this.name = name;
+        this.phone = phone;
+        this.degree = degree;
+    }
 
     public Teatcher(@Min(1) Long id, @NotNull @NotEmpty String name, @NotNull @NotEmpty @Range(min = 6, max = 6) @Min(100000) @Max(999999) int phone, @NotNull @NotEmpty String degree) {
         this.id = id;

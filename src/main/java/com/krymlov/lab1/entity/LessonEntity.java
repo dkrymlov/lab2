@@ -16,8 +16,8 @@ public class LessonEntity extends Lesson {
         super();
     }
 
-    public LessonEntity(@Min(1) Long id, @NotNull @NotEmpty String name, @NotNull @NotEmpty String control, @NotNull @NotEmpty @Min(20) @Max(50) @Range(min = 20, max = 50) Integer hours, TypeEntity type) {
-        super(id, name, control, hours, type);
+    public LessonEntity(@NotNull @NotEmpty String name, @NotNull @NotEmpty String control, @NotNull @NotEmpty @Min(20) @Max(50) @Range(min = 20, max = 50) Integer hours, TypeEntity type) {
+        super(name, control, hours, type);
     }
 
     @Id

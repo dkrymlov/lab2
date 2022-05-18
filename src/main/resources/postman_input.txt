@@ -1,0 +1,56 @@
+Faculties POST
+
+faculty insert example
+http://localhost:8081/insert/faculty?name=ФІТ
+
+faculty update example
+http://localhost:8081/update/faculty?name=Мех-Мат&id=8
+
+faculty delete example
+http://localhost:8081/delete/faculty?id=8
+------------------------------------------------------------------------------
+Groups POST
+
+group insert example
+http://localhost:8081/insert/group?name=К25&course=2&faculty=7&students=31
+
+group update example
+http://localhost:8081/update/group?id=1&name=К26&course=2&faculty=7&students=29
+
+group delete example
+http://localhost:8081/delete/group?id=1
+------------------------------------------------------------------------------
+Lessons POST
+
+lesson insert example
+http://localhost:8081/insert/lesson?name=Теорія Алгоритмів&control=Іспит&hours=40&type=2
+http://localhost:8081/insert/lesson?name=Теорія Алгоритмів&control=Іспит&hours=40&type=2
+
+lesson update example
+http://localhost:8081/update/lesson?id=1&name=Алгоритміка&control=Іспит&hours=42&type=1
+
+lesson delete example
+http://localhost:8081/delete/lesson?id=1
+http://localhost:8081/delete/lesson?id=2
+------------------------------------------------------------------------------
+Teatcher POST
+
+teatcher insert example
+http://localhost:8081/insert/teatcher?name=Людмила Леонідівна Омельчук&phone=123123&degree=Доцент
+
+teatcher update example
+http://localhost:8081/update/teatcher?id=1&name=Шкільняк Степан Степанович&phone=123122&degree=Професор
+
+teatcher delete example
+http://localhost:8081/delete/teatcher?id=1
+------------------------------------------------------------------------------
+Timetable POST
+
+timetable insert example
+http://localhost:8081/insert/timetable?para=2&room=232&day=2&group=1&lesson=2&teatcher=2
+
+timetable update example
+http://localhost:8081/update/timetable?para=3&room=232&day=2&group=1&lesson=2&teatcher=2&id=1
+
+timetable delete example
+http://localhost:8081/delete/timetable?id=1

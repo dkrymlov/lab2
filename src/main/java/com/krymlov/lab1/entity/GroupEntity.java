@@ -14,8 +14,8 @@ public class GroupEntity extends Group {
         super();
     }
 
-    public GroupEntity(@Min(1) Long id, @NotNull @NotEmpty String name, @Min(1) @Max(6) int course, FacultyEntity faculty, @NotNull @NotEmpty @Min(1) @Max(40) int students) {
-        super(id, name, course, faculty, students);
+    public GroupEntity(@NotNull @NotEmpty String name, @Min(1) @Max(6) int course, FacultyEntity faculty, @NotNull @NotEmpty @Min(1) @Max(40) int students) {
+        super(name, course, faculty, students);
     }
 
     @Id

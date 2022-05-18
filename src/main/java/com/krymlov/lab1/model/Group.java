@@ -32,8 +32,8 @@ public class Group {
 
     public Group(){}
 
-    public Group(@Min(1) Long id, @NotNull @NotEmpty String name, @Min(1) @Max(6) int course, FacultyEntity faculty, @NotNull @NotEmpty @Min(1) @Max(40) int students) {
-        this.id = id;
+    public Group(@NotNull @NotEmpty String name, @Min(1) @Max(6) int course, FacultyEntity faculty, @NotNull @NotEmpty @Min(1) @Max(40) int students) {
+        //this.id = id;
         this.name = name;
         this.course = course;
         this.faculty = faculty;

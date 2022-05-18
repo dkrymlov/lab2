@@ -43,6 +43,15 @@ public class Timetable {
         this.day = day;
     }
 
+    public Timetable(@Min(1) @Max(999) int room, @Min(1) @Max(5) int para, @Min(1) GroupEntity group, @Min(1) LessonEntity lesson, @Min(1) TeatcherEntity teatcher, @Min(1) DayEntity day) {
+        this.room = room;
+        this.para = para;
+        this.group = group;
+        this.lesson = lesson;
+        this.teatcher = teatcher;
+        this.day = day;
+    }
+
     public Timetable(){}
 
     public Long getId() {

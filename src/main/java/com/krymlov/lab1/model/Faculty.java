@@ -15,8 +15,7 @@ public class Faculty {
 
     public Faculty(){}
 
-    public Faculty(@Min(1) Long id, @NotEmpty @NotNull String name) {
-        this.id = id;
+    public Faculty(@NotEmpty @NotNull String name) {
         this.name = name;
     }
 

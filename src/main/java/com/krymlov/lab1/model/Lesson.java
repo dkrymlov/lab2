@@ -32,7 +32,7 @@ public class Lesson {
 
     public Lesson(){}
 
-    public Lesson(@Min(1) Long id, @NotNull @NotEmpty String name, @NotNull @NotEmpty String control, @NotNull @NotEmpty @Min(20) @Max(50) @Range(min = 20, max = 50) Integer hours, TypeEntity type) {
+    public Lesson(@NotNull @NotEmpty String name, @NotNull @NotEmpty String control, @NotNull @NotEmpty @Min(20) @Max(50) @Range(min = 20, max = 50) Integer hours, TypeEntity type) {
         this.id = id;
         this.name = name;
         this.control = control;

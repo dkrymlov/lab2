@@ -4,4 +4,6 @@ import com.krymlov.lab1.entity.TeatcherEntity;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TeatcherRepo extends CrudRepository<TeatcherEntity, Long> {
+    boolean existsByName(String name);
+    boolean existsByPhone(int phone);
 }

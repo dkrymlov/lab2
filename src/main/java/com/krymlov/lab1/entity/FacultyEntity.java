@@ -14,8 +14,8 @@ public class FacultyEntity extends Faculty {
         super();
     }
 
-    public FacultyEntity(@Min(1) Long id, @NotEmpty @NotNull String name) {
-        super(id, name);
+    public FacultyEntity(@NotEmpty @NotNull String name) {
+        super(name);
     }
 
     @Id

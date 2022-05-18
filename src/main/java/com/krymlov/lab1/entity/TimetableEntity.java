@@ -13,6 +13,10 @@ public class TimetableEntity extends Timetable {
         super(id, room, para, group, lesson, teatcher, day);
     }
 
+    public TimetableEntity(@Min(1) @Max(999) int room, @Min(1) @Max(5) int para, @Min(1) GroupEntity group, @Min(1)LessonEntity lesson, @Min(1) TeatcherEntity teatcher, @Min(1) DayEntity day) {
+        super(room, para, group, lesson, teatcher, day);
+    }
+
     public TimetableEntity() {
         super();
     }
